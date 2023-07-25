@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="npm start" type="js.build_tools.npm">
+    <package-json value="$PROJECT_DIR$/frontend/package.json" />
+    <command value="run" />
+    <scripts>
+      <script value="start" />
+    </scripts>
+    <node-interpreter value="project" />
+    <envs>
+      <env name="REACT_APP_PUBLIC_STRAPI_API_AUTHTOKEN" value="Bearer 3cceae9f19f3303c35e8baf838e522bec975cba257e92ad87dba6246b50df52ecf8c54522ab669db7cea0066a3e96da0d55dc02e765197bca5bc00bcdee9d0ad3636c954110bf6b84221159373732a4a3060ab30a74ddb9e41a978717ac9e22fabb766dc008df6fff9ca0624422a390668be6c6430539925ba06d172066aef41" />
+      <env name="REACT_APP_PUBLIC_STRAPI_API_URL" value="https://strapi-ynme.onrender.com" />
+      <env name="GENERATE_SOURCEMAP" value="false" />
+    </envs>
+    <method v="2" />
+  </configuration>
+</component>
