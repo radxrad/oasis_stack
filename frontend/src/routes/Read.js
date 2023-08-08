@@ -260,7 +260,7 @@ export default function Read() {
           <div className="publish-time">
             <div className="label">Published:</div>
             <div className="time">{micropub?.attributes?.publishedAt ?
-               format (Date.parse(micropub?.attributes?.publishedAt), "yyyy/mm/dd"): ""
+               format (Date.parse(micropub?.attributes?.publishedAt), "yyyy/MM/dd"): ""
             }</div>
           </div>
           <div className="authors">

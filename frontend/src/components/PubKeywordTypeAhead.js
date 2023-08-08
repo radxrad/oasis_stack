@@ -55,7 +55,7 @@ export default function PubKeywordTypeahead({addKeyword}) {
             id="async-example"
             isLoading={isLoading}
             labelKey="label"
-            minLength={3}
+            minLength={2}
             onSearch={handleSearch}
             options={options}
             selected={selected}

@@ -1,0 +1,480 @@
+{
+  "data": [
+    {
+      "id": 3,
+      "attributes": {
+        "title": "BA.2.12.1, BA.4 and BA.5 escape antibodies elicited by Omicron infection",
+        "abstract": "Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) Omicron sublineages BA.2.12.1, BA.4 and BA.5 exhibit higher transmissibility than the BA.2 lineage1. The receptor binding and immune-evasion capability of these recently emerged variants require immediate investigation. Here, coupled with structural comparisons of the spike proteins, we show that BA.2.12.1, BA.4 and BA.5 (BA.4 and BA.5 are hereafter referred collectively to as BA.4/BA.5) exhibit similar binding affinities to BA.2 for the angiotensin-converting enzyme 2 (ACE2) receptor.  Together, our results indicate that Omicron may evolve mutations to evade the humoral immunity elicited by BA.1 infection, suggesting that BA.1-derived vaccine boosters may not achieve broad-spectrum protection against new Omicron variants.",
+        "body": "The recent emergence and global spread of the SARS-CoV-2 variant Omicron (B.1.1.529) have posed a critical challenge to the efficacy of COVID-19 vaccines and neutralizing antibody (NAb) therapy6,7,8,9. Owing to multiple mutations to the spike protein, including in the receptor-binding domain (RBD) and N-terminal domain, Omicron BA.1 infection can result in substantial NAb evasion3,10,11,12,13. Omicron sublineage BA.2 has rapidly surged worldwide, out-competing BA.1. Compared with the RBD of BA.1, BA.2 contains three additional mutations, T376A, D405N and R408S, and lacks the BA.1 mutations G446S and G496S (Extended Data Fig. 1a). S371L on BA.1 is also substituted with S371F in BA.2. The Omicron variants that have emerged more recently contain similar RBD sequences to BA.2, with the addition of L452 and F486 substitutions—L452Q in BA.2.12.1, L452M in BA.2.13 and L452R/F486V in BA.4 and BA.5—and exhibit a transmission advantage over BA.2. There is an urgent and immediate need to investigate the receptor binding and immune-evasion capabilities of these new Omicron variants.",
+        "rating": null,
+        "slug": "ba-2-12-1-ba-4-and-ba-5-escape-antibodies-elicited-by-omicron-infection",
+        "source": "https://www.nature.com/articles/s41586-022-04980-y",
+        "createdAt": "2022-09-16T16:19:59.382Z",
+        "updatedAt": "2022-09-16T16:20:54.281Z",
+        "publishedAt": "2022-09-16T16:20:54.277Z",
+        "refList": null,
+        "files": {
+          "data": [
+            {
+              "id": 5,
+              "attributes": {
+                "name": "41586_2022_4980_Fig1_HTML.png.webp",
+                "alternativeText": "41586_2022_4980_Fig1_HTML.png.webp",
+                "caption": "41586_2022_4980_Fig1_HTML.png.webp",
+                "width": 2161,
+                "height": 1106,
+                "formats": {
+                  "thumbnail": {
+                    "name": "thumbnail_41586_2022_4980_Fig1_HTML.png.webp",
+                    "hash": "thumbnail_41586_2022_4980_Fig1_HTML_png_df8ea5abad",
+                    "ext": ".webp",
+                    "mime": "image/webp",
+                    "path": null,
+                    "width": 245,
+                    "height": 125,
+                    "size": 8.52,
+                    "url": "/uploads/thumbnail_41586_2022_4980_Fig1_HTML_png_df8ea5abad.webp"
+                  },
+                  "large": {
+                    "name": "large_41586_2022_4980_Fig1_HTML.png.webp",
+                    "hash": "large_41586_2022_4980_Fig1_HTML_png_df8ea5abad",
+                    "ext": ".webp",
+                    "mime": "image/webp",
+                    "path": null,
+                    "width": 1000,
+                    "height": 512,
+                    "size": 88.06,
+                    "url": "/uploads/large_41586_2022_4980_Fig1_HTML_png_df8ea5abad.webp"
+                  },
+                  "medium": {
+                    "name": "medium_41586_2022_4980_Fig1_HTML.png.webp",
+                    "hash": "medium_41586_2022_4980_Fig1_HTML_png_df8ea5abad",
+                    "ext": ".webp",
+                    "mime": "image/webp",
+                    "path": null,
+                    "width": 750,
+                    "height": 384,
+                    "size": 55.58,
+                    "url": "/uploads/medium_41586_2022_4980_Fig1_HTML_png_df8ea5abad.webp"
+                  },
+                  "small": {
+                    "name": "small_41586_2022_4980_Fig1_HTML.png.webp",
+                    "hash": "small_41586_2022_4980_Fig1_HTML_png_df8ea5abad",
+                    "ext": ".webp",
+                    "mime": "image/webp",
+                    "path": null,
+                    "width": 500,
+                    "height": 256,
+                    "size": 28.43,
+                    "url": "/uploads/small_41586_2022_4980_Fig1_HTML_png_df8ea5abad.webp"
+                  }
+                },
+                "hash": "41586_2022_4980_Fig1_HTML_png_df8ea5abad",
+                "ext": ".webp",
+                "mime": "image/webp",
+                "size": 281.91,
+                "url": "/uploads/41586_2022_4980_Fig1_HTML_png_df8ea5abad.webp",
+                "previewUrl": null,
+                "provider": "local",
+                "provider_metadata": null,
+                "createdAt": "2022-09-16T16:18:58.497Z",
+                "updatedAt": "2022-09-16T16:18:58.497Z"
+              }
+            }
+          ]
+        },
+        "keyword": {
+          "data": {
+            "id": 1,
+            "attributes": {
+              "name": "COVID",
+              "slug": "covid",
+              "createdAt": "2022-08-25T21:51:57.391Z",
+              "updatedAt": "2022-08-25T21:51:57.391Z"
+            }
+          }
+        },
+        "writer": {
+          "data": {
+            "id": 1,
+            "attributes": {
+              "name": "David Doe",
+              "email": "daviddoe@strapi.io",
+              "createdAt": "2022-08-02T22:50:03.497Z",
+              "updatedAt": "2022-08-02T22:50:03.497Z"
+            }
+          }
+        },
+        "user": {
+          "data": null
+        },
+        "ratings": {
+          "data": []
+        },
+        "question": {
+          "data": null
+        }
+      }
+    },
+    {
+      "id": 5,
+      "attributes": {
+        "title": "Six Ways Fluvoxamine May Act To Prevent Severe Covid-19",
+        "abstract": "A recent meta-analysis of a small number of fluvoxamine efficacy trials enrolling just over 2,000 patients found that fluvoxamine reduces the chances of severe hospitalization by up to 95%. If this efficacy is maintained in larger studies, fluvoxamine could be an important component of the Test-to-Treat strategy that the US is in the process of rolling out.\n\n",
+        "body": "Fluvoxamine was not developed as an anti-COVID drug. It has long been used as a mood-stabilizing selective serotonin reuptake inhibitor (SSRI) and is now available as an inexpensive generic drug worldwide.The apparent effectiveness of fluvoxamine raises the question of how it might act independently of its use as a mood stabilizer. The following review by Sukhatme et al. provides details of the potential mechanisms by which fluvoxamine has the potential to interfere with the most severe consequences of COVID 19 infection, including cytokine storms, coagulation, and hyperinflammation.",
+        "rating": null,
+        "slug": "six-ways-fluvoxamine-may-act-to-prevent-severe-covid-19",
+        "source": "https://www.forbes.com/sites/williamhaseltine/2022/04/18/six-ways-fluvoxamine-may-act-to-prevent-severe-covid-19/?sh=4077c788219b",
+        "createdAt": "2022-09-16T16:24:10.316Z",
+        "updatedAt": "2022-09-16T16:24:12.250Z",
+        "publishedAt": "2022-09-16T16:24:12.246Z",
+        "refList": null,
+        "files": {
+          "data": [
+            {
+              "id": 6,
+              "attributes": {
+                "name": "960x0.jpg",
+                "alternativeText": "960x0.jpg",
+                "caption": "960x0.jpg",
+                "width": 959,
+                "height": 649,
+                "formats": {
+                  "thumbnail": {
+                    "name": "thumbnail_960x0.jpg",
+                    "hash": "thumbnail_960x0_3ee02495fe",
+                    "ext": ".jpg",
+                    "mime": "image/jpeg",
+                    "path": null,
+                    "width": 231,
+                    "height": 156,
+                    "size": 7.21,
+                    "url": "/uploads/thumbnail_960x0_3ee02495fe.jpg"
+                  },
+                  "medium": {
+                    "name": "medium_960x0.jpg",
+                    "hash": "medium_960x0_3ee02495fe",
+                    "ext": ".jpg",
+                    "mime": "image/jpeg",
+                    "path": null,
+                    "width": 750,
+                    "height": 508,
+                    "size": 38.95,
+                    "url": "/uploads/medium_960x0_3ee02495fe.jpg"
+                  },
+                  "small": {
+                    "name": "small_960x0.jpg",
+                    "hash": "small_960x0_3ee02495fe",
+                    "ext": ".jpg",
+                    "mime": "image/jpeg",
+                    "path": null,
+                    "width": 500,
+                    "height": 338,
+                    "size": 22.48,
+                    "url": "/uploads/small_960x0_3ee02495fe.jpg"
+                  }
+                },
+                "hash": "960x0_3ee02495fe",
+                "ext": ".jpg",
+                "mime": "image/jpeg",
+                "size": 50.59,
+                "url": "/uploads/960x0_3ee02495fe.jpg",
+                "previewUrl": null,
+                "provider": "local",
+                "provider_metadata": null,
+                "createdAt": "2022-09-16T16:22:02.203Z",
+                "updatedAt": "2022-09-16T16:22:02.203Z"
+              }
+            }
+          ]
+        },
+        "keyword": {
+          "data": {
+            "id": 1,
+            "attributes": {
+              "name": "COVID",
+              "slug": "covid",
+              "createdAt": "2022-08-25T21:51:57.391Z",
+              "updatedAt": "2022-08-25T21:51:57.391Z"
+            }
+          }
+        },
+        "writer": {
+          "data": {
+            "id": 1,
+            "attributes": {
+              "name": "David Doe",
+              "email": "daviddoe@strapi.io",
+              "createdAt": "2022-08-02T22:50:03.497Z",
+              "updatedAt": "2022-08-02T22:50:03.497Z"
+            }
+          }
+        },
+        "user": {
+          "data": null
+        },
+        "ratings": {
+          "data": [
+            {
+              "id": 1,
+              "attributes": {
+                "createdAt": "2023-04-11T22:50:46.539Z",
+                "updatedAt": "2023-04-11T23:08:34.719Z",
+                "publishedAt": "2023-04-11T22:50:51.604Z"
+              }
+            }
+          ]
+        },
+        "question": {
+          "data": null
+        }
+      }
+    },
+    {
+      "id": 6,
+      "attributes": {
+        "title": "Will The BA.4.6 Variant Drive The Next Wave Of The Covid-19 Pandemic?",
+        "abstract": "<p><em>Here, we draw attention to a variant, BA.4.6, which is the latest variant spreading in the United States. We note in this summary that BA.4.6 contains five amino acid changes distinct from the currently dominant BA.5 variant and seventeen nucleotide changes, which all may act to improve viral fitness and trigger a new wave of the pandemic.</em></p>\n",
+        "body": "<p><span style=\"color: rgb(51,51,51);background-color: rgb(252,252,252);font-size: 18px;font-family: Georgia, Cambria, \"Times New Roman\", Times, serif;\">Between the currently rampant BA.5 and the emerging BA.4.6, there are only seven amino acid differences throughout the entire genome. Although the focus is typically on the spike protein, five of seven lie outside the spike. These include a deletion in NSP1, an amino acid in the membrane protein that is unmutated in BA.4.6 but is changed in BA.5, and three amino acid substitutions in Orf6, Orf7b, and the nucleocapsid</span></p>\n",
+        "rating": null,
+        "slug": "Will-The-BA.4.6-Variant-Drive-The-Next-Wave-Of-The-Covid-19-Pandemic",
+        "source": null,
+        "createdAt": "2022-09-20T23:09:21.692Z",
+        "updatedAt": "2022-09-20T23:09:21.692Z",
+        "publishedAt": "2022-09-20T23:09:21.687Z",
+        "refList": [],
+        "files": {
+          "data": null
+        },
+        "keyword": {
+          "data": null
+        },
+        "writer": {
+          "data": {
+            "id": 1,
+            "attributes": {
+              "name": "David Doe",
+              "email": "daviddoe@strapi.io",
+              "createdAt": "2022-08-02T22:50:03.497Z",
+              "updatedAt": "2022-08-02T22:50:03.497Z"
+            }
+          }
+        },
+        "user": {
+          "data": null
+        },
+        "ratings": {
+          "data": []
+        },
+        "question": {
+          "data": null
+        }
+      }
+    },
+    {
+      "id": 7,
+      "attributes": {
+        "title": "Update – Legionella identified as cause of cluster of pneumonia cases in Tucuman, Argentina",
+        "abstract": "<p><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 18px;font-family: Roboto;\">The Pan American Health Organization (PAHO) has been informed by the Argentina Ministry of Health that legionella has been confirmed as the cause of a cluster of pneumonia cases associated with a health clinic in the province of Tucuman, Argentina.</span></p>\n",
+        "body": "<p><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 18px;font-family: Roboto;\">Legionella, in particular bacterium</span> <em>L. pneumophila</em><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 18px;font-family: Roboto;\">, is associated with outbreaks of severe pneumonia. The most common form of transmission is inhalation of contaminated aerosols produced in conjunction with water sprays, jets or mists. Infection can also occur by aspiration of contaminated water or ice, particularly in susceptible patients in hospital environments. Treatment includes the administration of antibiotics for several weeks or months. </span></p>\n",
+        "rating": null,
+        "slug": "Update-Legionella-identified-as-cause-of-cluster-of-pneumonia-cases-in-Tucuman-Argentina",
+        "source": null,
+        "createdAt": "2022-09-20T23:36:05.485Z",
+        "updatedAt": "2022-09-20T23:36:05.485Z",
+        "publishedAt": "2022-09-20T23:36:05.480Z",
+        "refList": [],
+        "files": {
+          "data": null
+        },
+        "keyword": {
+          "data": null
+        },
+        "writer": {
+          "data": {
+            "id": 1,
+            "attributes": {
+              "name": "David Doe",
+              "email": "daviddoe@strapi.io",
+              "createdAt": "2022-08-02T22:50:03.497Z",
+              "updatedAt": "2022-08-02T22:50:03.497Z"
+            }
+          }
+        },
+        "user": {
+          "data": null
+        },
+        "ratings": {
+          "data": []
+        },
+        "question": {
+          "data": null
+        }
+      }
+    },
+    {
+      "id": 16,
+      "attributes": {
+        "title": "Why use micro pubs? ",
+        "abstract": "<p>Micro pubs allow for rapid&nbsp;</p>\n<p></p>\n",
+        "body": "<p></p>\n",
+        "rating": null,
+        "slug": "Why-use-micro-pubs",
+        "source": null,
+        "createdAt": "2022-11-16T00:39:27.668Z",
+        "updatedAt": "2023-01-17T22:25:16.960Z",
+        "publishedAt": "2022-11-16T00:39:27.663Z",
+        "refList": [],
+        "files": {
+          "data": null
+        },
+        "keyword": {
+          "data": {
+            "id": 4,
+            "attributes": {
+              "name": "oasis how to",
+              "slug": "oasis-how-to",
+              "createdAt": "2023-01-17T22:25:00.933Z",
+              "updatedAt": "2023-01-17T22:25:00.933Z"
+            }
+          }
+        },
+        "writer": {
+          "data": {
+            "id": 1,
+            "attributes": {
+              "name": "David Doe",
+              "email": "daviddoe@strapi.io",
+              "createdAt": "2022-08-02T22:50:03.497Z",
+              "updatedAt": "2022-08-02T22:50:03.497Z"
+            }
+          }
+        },
+        "user": {
+          "data": {
+            "id": 2,
+            "attributes": {
+              "username": "demouser",
+              "email": "dwvalentine@ucsd.edu",
+              "provider": "local",
+              "confirmed": true,
+              "blocked": false,
+              "createdAt": "2022-10-25T23:09:44.295Z",
+              "updatedAt": "2022-10-25T23:10:58.967Z",
+              "name": "Demo User"
+            }
+          }
+        },
+        "ratings": {
+          "data": []
+        },
+        "question": {
+          "data": {
+            "id": 18,
+            "attributes": {
+              "question": "What are micropublications?",
+              "title": null,
+              "createdAt": "2023-02-08T00:08:41.953Z",
+              "updatedAt": "2023-02-08T00:35:25.864Z",
+              "publishedAt": "2023-02-08T00:35:25.861Z",
+              "description": "Why do we use thme.",
+              "dateasked": "2023-02-07T08:00:00.000Z",
+              "status": null,
+              "open": true
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 19,
+      "attributes": {
+        "title": "How can we better finance pandemic preparedness and community resilience?",
+        "abstract": "<p>Get a question</p>\n",
+        "body": "<p></p>\n",
+        "rating": null,
+        "slug": "How-can-we-better-finance-pandemic-preparedness-and-community-resilience",
+        "source": null,
+        "createdAt": "2023-04-04T23:19:33.096Z",
+        "updatedAt": "2023-04-04T23:19:33.096Z",
+        "publishedAt": "2023-04-04T23:19:33.091Z",
+        "refList": [],
+        "files": {
+          "data": null
+        },
+        "keyword": {
+          "data": null
+        },
+        "writer": {
+          "data": {
+            "id": 1,
+            "attributes": {
+              "name": "David Doe",
+              "email": "daviddoe@strapi.io",
+              "createdAt": "2022-08-02T22:50:03.497Z",
+              "updatedAt": "2022-08-02T22:50:03.497Z"
+            }
+          }
+        },
+        "user": {
+          "data": null
+        },
+        "ratings": {
+          "data": []
+        },
+        "question": {
+          "data": null
+        }
+      }
+    },
+    {
+      "id": 20,
+      "attributes": {
+        "title": "This is an example",
+        "abstract": "<p>Some answer to lifes questions</p>\n",
+        "body": "<p>Some deatiled body</p>\n",
+        "rating": null,
+        "slug": "This-is-an-example",
+        "source": null,
+        "createdAt": "2023-04-04T23:37:59.629Z",
+        "updatedAt": "2023-04-04T23:37:59.629Z",
+        "publishedAt": "2023-04-04T23:37:59.624Z",
+        "refList": [],
+        "files": {
+          "data": null
+        },
+        "keyword": {
+          "data": null
+        },
+        "writer": {
+          "data": {
+            "id": 1,
+            "attributes": {
+              "name": "David Doe",
+              "email": "daviddoe@strapi.io",
+              "createdAt": "2022-08-02T22:50:03.497Z",
+              "updatedAt": "2022-08-02T22:50:03.497Z"
+            }
+          }
+        },
+        "user": {
+          "data": null
+        },
+        "ratings": {
+          "data": []
+        },
+        "question": {
+          "data": null
+        }
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pageSize": 25,
+      "pageCount": 1,
+      "total": 7
+    }
+  }
+}

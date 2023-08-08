@@ -52,7 +52,9 @@ export default function SignInDialog() {
         //  Alert.success(`Welcome back ${response.data.user.username}!`);
 
           // navigate("/profile", { replace: true });
-          history.push("/user");
+         //history.push("/user");
+         history.goBack()
+          //navigate(-1);
         })
             .catch(error => {
               console.error(error);

@@ -19,13 +19,13 @@ import {
 
 export default function Home(apikey, apiusername) {
   //const example = text.micropub;
-  const { setUser } = useAuthContext();
+  const { user, isLoading, setUser } = useAuthContext();
   const [micropubs, setMicropubs] = useState([]);
   const [categories, setCategories ]= useState([]);
   const [keywords, setKeywords ]= useState([]);
   const [questions, setQuestions ]= useState([]);
   // const [isSignedIn, setIsSignedIn] = useState(localStorage.getItem("user"));
-  const [isSignedIn,setIsSignedIn] = useState(localStorage.getItem("user"));
+  //const [isSignedIn,setIsSignedIn] = useState(localStorage.getItem("user"));
   const [username,setUsername] = useState();
   const [password,setPassword] = useState();
   const [loggedIn, setLoggedIn] = useState(false);
@@ -147,7 +147,7 @@ export default function Home(apikey, apiusername) {
               micro-publications.
             </div>
           </div>
-          {isSignedIn ? (
+          {user ? (
             ""
           ) : (
               <SignUp></SignUp>
@@ -210,6 +210,7 @@ export default function Home(apikey, apiusername) {
                       ansNum={answerCount}
                       open={q.open}
                       slug={q.attributes.slug}
+                      time={q.attributes.updatedAt}
                       //   asker={q.attributes?.user_permissions_users.data.attributes.name}
                   >
 

@@ -107,6 +107,7 @@ export default function Question(props) {
     }
 
   const num = props.ansNum;
+    const time = props.time;
  // const asker = props.askerId;
   return (
     <div id={props.id} className="question">
@@ -114,6 +115,7 @@ export default function Question(props) {
         <p  onClick={handleShowQuestion}>{props.title}</p>
         <div className="control">
           {num > 1 ? `${num} answers` : `${num} answer`}
+            <div>{time}</div>
             <Button className="btn--blue btn--lg" onClick={handleShowNewPublication}>
                 <MdQuestionAnswer close={handleClose} />
                 <span>Answer a Question</span>

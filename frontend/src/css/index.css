@@ -397,7 +397,7 @@ a:active {
   align-items: center;
   justify-content: center;
   height: 400px;
-  /*background-image: url(/images/greens.jpeg);*/
+  background-image: url("~/public/greens.jpeg");
   background-position: center;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
@@ -554,7 +554,7 @@ a:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  /*background-image: url(/images/greens.jpeg);*/
+  background-image: url("~/public/greens.jpeg");
 }
 
 .signin .form-check-input {

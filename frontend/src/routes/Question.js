@@ -221,19 +221,20 @@ export default function Question(props) {
 
                 <Row>
                     <div className={"heading"}>
-                        Micropubs
+                        Micropubs Answering Question
                     </div>
 
-                <Row >
 
-
-                    <div >
                         {question ?
                             question.attributes.micropublications.data.length > 0 ?
                                 question.attributes.micropublications.data.map(item => {
                                     let file = item.attributes?.files?.data?.length > 0 ? item.attributes?.files?.data[0].attributes.url : undefined;
                                     file = file ? getStrapiURL(file) : file;
-                                    return <MicropubCardAnswer
+                                    return  <Row >
+
+
+                                        <div >
+                                        <MicropubCardAnswer
                                         figure={file}
                                         authorIds={item.attributes.writer.data?.id}
                                         title={item.attributes.title}
@@ -241,14 +242,16 @@ export default function Question(props) {
                                         id={item.attributes.slug}
                                         key={item.attributes.slug}
 
-                                    ></MicropubCardAnswer>
+                                    ></MicropubCardAnswer>   </div>
+                                        <hr/>
+                                    </Row>
+
                                 }
 
 
                                 ) : "No Micropublications"
                             : "Loading"}
-                    </div>
-                </Row>
+
                 </Row>
                <Row>
                    <ErrorBox />
