@@ -107,7 +107,14 @@ export default function Question(props) {
     }
 
   const num = props.ansNum;
-    const time = props.time;
+    let time = props.time? Date.parse(props.time) :  new Date();
+    try {
+        time = time.toLocaleDateString();
+    }
+
+    catch {
+        time = new Date().toLocaleDateString();
+    }
  // const asker = props.askerId;
   return (
     <div id={props.id} className="question">

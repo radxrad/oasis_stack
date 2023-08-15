@@ -3,16 +3,21 @@ import { Card } from "react-bootstrap";
 import history from "../history";
 import {getStrapiURL} from "../lib/api";
 import {ReviewStats} from "strapi-ratings-client";
+import {truncate} from "lodash"
+
 export default function MicropubCard(props) {
+    let short = truncate(props.abstract,{length:40})
+
   return (
     <Card className="micropub" onClick={() => history.push(`/read/${props.id}`)}>
       <div className="content">
-          { props.figure && <Card.Img src={props.figure} alt="img" />
+          { props.figure ? (<Card.Img src={props.figure} alt="img" />
+          ):  (<Card.Img src="https://source.unsplash.com/random" alt="img" />)
           }
 
         <div>
           <Card.Title>{props.title}</Card.Title>
-          <Card.Text dangerouslySetInnerHTML={{__html:props.abstract}} ></Card.Text>
+          <Card.Text dangerouslySetInnerHTML={{__html:short}} ></Card.Text>
         </div>
       </div>
       <div className="authors">
