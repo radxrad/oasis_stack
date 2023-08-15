@@ -167,7 +167,7 @@ export default function User() {
                         ansNum={answerCount}
                         open={q.open}
                         slug={q.attributes.slug}
-                        time={q.attributes.updatedAt}
+                        time={q.attributes?.createdAt}
                      //   asker={q.attributes?.user_permissions_users.data.attributes.name}
                     >
 

@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { Button } from "react-bootstrap";
 import {createAPI, fetchAPI} from "../lib/api";
 import { MdQuestionAnswer } from "react-icons/md";
+import {format} from "date-fns";
 
 
 export default function Question(props) {
@@ -106,14 +107,16 @@ export default function Question(props) {
         });
     }
 
-  const num = props.ansNum;
-    let time = props.time? Date.parse(props.time) :  new Date();
+    const num = props.ansNum;
+    let time = props.time? Date.parse(props?.time) :  new Date();
     try {
-        time = time.toLocaleDateString();
+        time = format (time, "yyyy/MM/dd");
     }
 
     catch {
-        time = new Date().toLocaleDateString();
+        console.log("datetime parse issue")
+        time = new Date();
+        time = format (time, "yyyy/MM/dd");
     }
  // const asker = props.askerId;
   return (
