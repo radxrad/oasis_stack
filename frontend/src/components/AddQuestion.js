@@ -3,7 +3,7 @@ import { Redirect, useLocation } from "react-router-dom";
 import { Form, Button } from "react-bootstrap";
 import { MdQuestionAnswer } from "react-icons/md";
 import VisibilitySelector from "./VisibilitySelector";
-import {createAPI, getStrapiURL} from "../lib/api";
+import {createAPI, getStrapiURL, updateAPI} from "../lib/api";
 import { useHistory } from "react-router-dom";
 import {useAuthContext} from "../context/AuthContext";
 import {getRefreshToken} from "../lib/helpers";
@@ -67,6 +67,29 @@ export default function AddQuestion(props) {
 
     });
   };
+
+  const handleChatGPT = async (e) => {
+    const submitQ = {
+      "prompt": question,
+    };
+    return updateAPI("/strapi-chatgpt/prompt",submitQ ).then((response)=>{
+      console.log(response.data);
+      // history.push("/user");
+      let r = response;
+
+    }).catch((err) => {
+      console.error(err);
+
+      if (user) {
+        getRefreshToken();
+      } else {
+        // display some dialog login
+        Redirect("/signin");
+      }
+
+
+    });
+  };
   if (user) {
 
   return (
@@ -113,6 +136,10 @@ export default function AddQuestion(props) {
         <Button className="btn--lg" onClick={(e) => handleAddQuestion(e)}>
           <MdQuestionAnswer />
           Ask a Question
+        </Button>
+        <Button className="btn--lg" onClick={(e) => handleChatGPT(e)}>
+          <MdQuestionAnswer />
+          Ask ChatGPT
         </Button>
       </Form.Group>
     </Form>

@@ -13,7 +13,7 @@ import jwt_decode from "jwt-decode";
 
 const AuthProvider = ({ children }) => {
     const [userData, setUserData] = useState();
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
     const authToken = getToken();
     const    getRefreshToken= async () => {

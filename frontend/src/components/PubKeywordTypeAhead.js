@@ -52,7 +52,7 @@ export default function PubKeywordTypeahead({addKeyword}) {
         <AsyncTypeahead
             onBlur={handleAddMicroPub}
             filterBy={filterBy}
-            id="async-example"
+            id="async-keyword"
             isLoading={isLoading}
             labelKey="label"
             minLength={2}

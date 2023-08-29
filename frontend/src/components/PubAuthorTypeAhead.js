@@ -52,7 +52,7 @@ export default function PubAuthorTypeahead({addAuthor}) {
         <AsyncTypeahead
             onBlur={handleAddMicroPub}
             filterBy={filterBy}
-            id="async-example"
+            id="async-autor"
             isLoading={isLoading}
             labelKey="label"
             minLength={3}

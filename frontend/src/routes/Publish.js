@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from "react";
-import { useHistory } from "react-router-dom";
+import {useHistory, useParams} from "react-router-dom";
 import { Button, ListGroup, Tab, Table, Dropdown } from "react-bootstrap";
 
 //import text from "text.json";
 import history from "../history.js";
 import MicropubCard from "../components/MicropubCard";
 import MicropubBody from "../components/MicropubBody";
-import { EditorState,convertToRaw } from "draft-js";
+import { EditorState,convertToRaw, convertFromHTML, ContentState } from "draft-js";
 // import { convertToRaw } from 'draft-js';
 import draftToHtml from 'draftjs-to-html';
 import { draftToMarkdown } from 'markdown-draft-js';
@@ -24,6 +24,7 @@ import PubKeywordTypeahead from "../components/PubKeywordTypeAhead";
 import PubAuthorTypeahead from "../components/PubAuthorTypeAhead";
 export default function Publish(props) {
 
+  const {slug} = useParams();
 
   const { user, isLoading, setUser } = useAuthContext();
   let endpoint = '/micropublications';
@@ -44,6 +45,7 @@ export default function Publish(props) {
   const [errors, setErrors]= useState("");
   const [showError, setShowError] = useState(false);
   const [activeTab, setActiveTab] = useState("#abstract");
+  const [writer,setWriter] = useState();
   const [authors,setAuthors] = useState([]);
   const [pubKeywords, setPubKeywords] = useState([]);
   const handleErrorClose = () => setShowError(false);
@@ -101,7 +103,7 @@ export default function Publish(props) {
     console.log("test" + e.target.value);
   } ;
   //const micropub = text.micropub;
-  const [micropub, setMicropub] = useState([]);
+  const [micropub, setMicropub] = useState();
   const [resources,SetResources] = useState([]);
   const [categories, setCategories ]= useState([]);
   const [keywords, setKeywords ]= useState([]);
@@ -112,8 +114,65 @@ export default function Publish(props) {
   const [username,setUsername] = useState();
   const [password,setPassword] = useState();
   const [loggedIn, setLoggedIn] = useState(false);
+  const getMicropub  = async () => {
+    const [ micropubRes] = await Promise.all([
+      fetchAPI("/micropublications", {
+        filters: {
+          slug: slug,
+        },
+        populate: ["files", "keyword", "writer.picture", "writer", "ratings", "refList", "user"],
+      }),
+
+    ]);
+    const micros  = await micropubRes;
+    // const reviews = await reviewsRes;
+    return micros
+    //setMicropub(micros.data[0]);
+    // setReviews(reviews.data);
+  };
+
+ useEffect( ()=> {
+       if (slug) {
+         getMicropub().then(
+             (micros) => {
+               let thisPub = micros.data[0]
+               setMicropub(thisPub);
+               setStrapiDocId(thisPub.id)
+               setEditingValue(true);
+               setTitleValue(thisPub.attributes.title)
+               //setWriter(thisPub.attributes.user.data)
+              // let body = bodyValue.convertFromHTML(thisPub.attributes.body)
+               const blocksFromHTML = convertFromHTML(thisPub.attributes.body);
+               const bodystate = ContentState.createFromBlockArray(
+                   blocksFromHTML.contentBlocks,
+                   blocksFromHTML.entityMap,
+               );
+               setBodyValue(EditorState.createWithContent(bodystate))
+
+               const absblocksFromHTML = convertFromHTML(thisPub.attributes.body);
+               const absstate = ContentState.createFromBlockArray(
+                   absblocksFromHTML.contentBlocks,
+                   absblocksFromHTML.entityMap,
+               );
+               setAbstractValue(EditorState.createWithContent(absstate))
+            //   setAbstractValue(thisPub.attributes.abstract)
+              // setRefList(thisPub.attributes?.refList)
+
+               // setAuthors(thisPub.attributes?.authors)
+               setKeywords(thisPub.attributes?.keywords)
+                //setFilesValue(thisPub.attributes?.files)
+
+             }
+         )
+             // make sure to catch any error
+             .catch(console.error);
+       }
+     },
+     [])
 
   useEffect( () =>  {
+
+
     const question = props.history.location.state?.question;
     const questionid = props.history.location.state?.questionid;
     if (question !=="" || question === undefined )(
@@ -202,7 +261,9 @@ export default function Publish(props) {
       const users = await userRes;
       if (users.length >0) {
         const user_id = await users[0].id ;
+        setWriter(user);
       }
+
       setAuthors([user]);
     }
 
@@ -278,7 +339,7 @@ export default function Publish(props) {
       "refList": refList,
       "slug":slug,
      // "files": mpFiles,
-      "writer":1, // for now
+      "writer":writer, // for now
       authors: authorIdList,
 
     };
@@ -518,6 +579,10 @@ export default function Publish(props) {
 
   const sidebar = (
     <div className="sidebar">
+      <div className="label">Writer</div>
+      { writer ?
+          <div>{writer.name}</div>
+       : "" }
       <div className="list">
         <div className="label">Authors</div>
         <div className="search">

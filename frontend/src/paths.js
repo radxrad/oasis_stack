@@ -4,7 +4,7 @@ const paths = {
   signUp: "/signup",
   user: "/user",
   read: "/read/:slug",
-  publish: "/publish",
+  publish: "/publish/:slug",
   test: "/test",
   about: "/about",
   question: "/question/:slug",
