@@ -27,28 +27,28 @@ export default function Question(props) {
 
         }
     };
-    const handleChatGPT = async (e) => {
-        const submitQ = {
-            "prompt": question,
-        };
-        return updateAPI("/strapi-chatgpt/prompt",submitQ ).then((response)=>{
-            console.log(response.data);
-            // history.push("/user");
-            let r = response;
-            setDescription(response)
-        }).catch((err) => {
-            console.error(err);
-
-            if (user) {
-                getRefreshToken();
-            } else {
-                // display some dialog login
-                Redirect("/signin");
-            }
-
-
-        });
-    };
+    // const handleChatGPT = async (e) => {
+    //     const submitQ = {
+    //         "prompt": question,
+    //     };
+    //     return updateAPI("/strapi-chatgpt/prompt",submitQ ).then((response)=>{
+    //         console.log(response.data);
+    //         // history.push("/user");
+    //         let r = response;
+    //         setDescription(response)
+    //     }).catch((err) => {
+    //         console.error(err);
+    //
+    //         if (user) {
+    //             getRefreshToken();
+    //         } else {
+    //             // display some dialog login
+    //             Redirect("/signin");
+    //         }
+    //
+    //
+    //     });
+    // };
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     //const handleShow = () => setShow(true);
