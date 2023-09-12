@@ -8,6 +8,8 @@ import {getStrapiURL} from "../lib/api";
 import { useHistory } from "react-router-dom";
 import { useAuthContext } from "../context/AuthContext";
 import { setToken } from "../lib/helpers";
+import ErrorBox from "../components/ErrorBox";
+import SignUp from "./SignUp";
 
 export default function SignIn(props) {
     const history = useHistory();
@@ -23,9 +25,11 @@ export default function SignIn(props) {
   //const navigate = useNavigate();
 
 
+
   const [isLoading, setIsLoading] = useState(false);
 
-  const [error, setError] = useState("");
+  const [error, setError] = useState();
+    const [hasError, setHasError] = useState(false);
   const onFinish =  async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -58,9 +62,13 @@ export default function SignIn(props) {
           // navigate("/profile", { replace: true });
           history.push(from);
         })
-            .catch(error => {
-              console.error(error);
-              setError(error?.message ?? "Something went wrong!");
+            .catch(reponse => {
+                e.stopPropagation()
+              console.error(reponse);
+              setHasError(true)
+              var errorResp = reponse.response.data
+
+              setError(errorResp?.error.message ?? "Something went wrong!");
             }).finally( ()=>
             {setIsLoading(false);
             });
@@ -99,9 +107,23 @@ export default function SignIn(props) {
             SignIn {isLoading && <Spinner size="small" />}
           </Button>
           <a href="/signup">New to OASIS? Sign up now</a>
+            <div>
+                <a href="/forgotpassword">Forgot Password</a>
+            </div>
         </div>
+
+        {hasError ? (
+        <div className="py-2">
+            <div className="alert alert-danger error-msg">{error}</div>
+        </div>
+    ) : (
+        ""
+    )}
       </Form>
     </div>
+
+
+
       </Fragment>
   );
 }
