@@ -22,7 +22,7 @@ export default function QuestionFrontPage(props) {
 
 
   return (
-      <div className ="questions">
+      <div className ="questions card">
          <a href={`/question/${slug}`} className={`listitem__${type} listitem`}>
            {iconMapping[type]} {title}
            <p>{num > 1 ? `${num} answers` : `${num} answer`}</p>

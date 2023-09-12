@@ -586,8 +586,8 @@ jsconfig.json
 }
 
 .listitem__question {
-  background-color: var(--blue-80);
-  color: white;
+  background-color: white;
+  color: #717171;
 }
 
 .listitem__answer {

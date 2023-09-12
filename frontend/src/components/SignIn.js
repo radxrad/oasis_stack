@@ -148,6 +148,8 @@ export default function SignInDialog() {
             onChange={handlePassword}
           />
           <Form.Check type="checkbox" label="Remember me" />
+
+
         </Form.Group>
         <div className="controls">
           <Button
@@ -158,6 +160,9 @@ export default function SignInDialog() {
             SignIn {isLoading && <Spinner size="small" />}
           </Button>
           <a href="/signup">New to OASIS? Sign up now</a>
+            <div>
+                <a href="/forgot">Forgot Password</a>
+            </div>
         </div>
       </Form>
 
