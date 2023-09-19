@@ -9,8 +9,9 @@ const paths = {
   about: "/about",
   question: "/question/:slug",
   postreview: "/review/:contentID",
-  forgotpassword: "/reset-password",
-  changepassword: "/changeassword",
+  forgotpassword: "/forgot-password",
+  resetpassword: "/reset-password",
+  changepassword: "/change-password",
 };
 
 export default paths;

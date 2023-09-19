@@ -15,6 +15,7 @@ import About from "./routes/About";
 import Question from "./routes/Question";
 import ForgotPassword from "./routes/PasswordForgotten"
 import ChangePassword from "./routes/PasswordChange"
+import ResetPassword from "./routes/PasswordReset"
 
 
 import Test from "./routes/Test";
@@ -30,6 +31,7 @@ import {
   ReviewForm
 } from "strapi-ratings-client";
 import { CommentsProvider } from "strapi-comments-client"
+import PasswordReset from "./routes/PasswordReset";
 function App() {
   // const { user, isLoading, setUser } = useAuthContext();
   const { user, isLoading } = useAuthContext();
@@ -74,6 +76,7 @@ function App() {
                 <Route path={paths.question} component={Question} />
                 <Route path={paths.postreview} component={Question} />
                 <Route path={paths.forgotpassword} component={ForgotPassword} />
+                <Route path={paths.resetpassword} component={ResetPassword} />
                 <Route path={paths.changepassword} component={ChangePassword} />
               </Switch>
             </CommentsProvider>

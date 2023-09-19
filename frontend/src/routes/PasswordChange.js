@@ -4,7 +4,7 @@ import { Form, Button } from "react-bootstrap";
 import Spinner from 'react-bootstrap/Spinner';
 import Alert from 'react-bootstrap/Alert';
 import axios from "axios";
-import {getStrapiURL} from "../lib/api";
+import {getStrapiAuth, getStrapiURL} from "../lib/api";
 import { useHistory } from "react-router-dom";
 import { useAuthContext } from "../context/AuthContext";
 import { setToken } from "../lib/helpers";
@@ -20,7 +20,17 @@ export default function PassowrdChange(props) {
   //const [user, setUser] = useState(localStorage.getItem("user"));
   const handleUsername = (e)=> setUsername(e.target.value);
 
-  //const navigate = useNavigate();
+    const [currentPassword,setcurrentPassword] = useState();
+    const [password,setPassword] = useState();
+    const [passwordConfirmation,setPasswordConfirmation] = useState();
+
+    //const [user, setUser] = useState(localStorage.getItem("user"));
+    const handlePassword = (e)=> setPassword(e.target.value);
+    const handlePasswordConfirmation = (e)=> setPasswordConfirmation(e.target.value);
+    const handlecurrentPassword = (e)=> setcurrentPassword(e.target.value);
+    //const navigate = useNavigate();
+
+
 
 
   const [isLoading, setIsLoading] = useState(false);
@@ -30,12 +40,23 @@ export default function PassowrdChange(props) {
     e.preventDefault();
     setIsLoading(true);
       axios
-          .post(getStrapiURL('/api/auth/forgot-password'), {
-              email: username, // user's email
-          })
+          .post(getStrapiURL('/api/auth/change-password'),
+           {
+
+          "password": password,
+          "currentPassword": currentPassword,
+          "passwordConfirmation": passwordConfirmation
+
+
+          },{
+                  headers: {
+                      "Content-Type": "application/json",
+                      "Authorization": getStrapiAuth(),
+
+                  } })
           .then(response => {
-              console.log('Your user received an email');
-              setMessage("You should receive an email")
+              console.log('Password Changed');
+              setMessage("Password Changed")
               setIsLoading(false);
               history.push("/signin")
           })
@@ -52,33 +73,54 @@ export default function PassowrdChange(props) {
       <Fragment>
     <div className="signin light-bg max-window">
       <Form className="signup__container">
-        <div className="signup__header">Forgot Password</div>
-        <Form.Group>
-          <Form.Control
-            type="email"
-            className="signup__textbox"
-            placeholder="email"
-            value={username}
-            onChange={handleUsername}
-          />
-        </Form.Group>
+
+
+                  <div className="signup__header">Current Password</div>
+                  <Form.Control
+                      type="password"
+                      className="signup__textbox"
+                      placeholder="Current Password"
+                      value={currentPassword}
+                      onChange={handlecurrentPassword}
+                  />
+                  <div className="signup__header">New Password</div>
+                  <Form.Control
+                      type="password"
+                      className="signup__textbox"
+                      placeholder="New Password"
+                      value={password}
+                      onChange={handlePassword}
+                  />
+                  <div className="signup__header">Confirm Password</div>
+                  <Form.Control
+                      type="password"
+                      className="signup__textbox"
+                      placeholder="Confirm Password"
+                      value={passwordConfirmation}
+                      onChange={handlePasswordConfirmation}
+                  />
+
+                  {message ? (
+                      <div className="py-2">
+                          <div className="alert alert-danger error-msg">{message}</div>
+                      </div>
+                  ) : (
+                      ""
+                  )}
+
+
+
         <div className="controls">
           <Button
             className="btn--lg"
             type="submit"
             onClick={onFinish}
           >
-            Send Email {isLoading && <Spinner size="small" />}
+            Change Password {isLoading && <Spinner size="small" />}
           </Button>
 
         </div>
-          {message ? (
-              <div className="py-2">
-                  <div className="alert alert-danger error-msg">{message}</div>
-              </div>
-          ) : (
-              ""
-          )}
+
       </Form>
     </div>
       </Fragment>
