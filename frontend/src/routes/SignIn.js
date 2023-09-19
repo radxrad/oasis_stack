@@ -10,6 +10,7 @@ import { useAuthContext } from "../context/AuthContext";
 import { setToken } from "../lib/helpers";
 import ErrorBox from "../components/ErrorBox";
 import SignUp from "./SignUp";
+import paths from "../paths";
 
 export default function SignIn(props) {
     const history = useHistory();
@@ -108,7 +109,7 @@ export default function SignIn(props) {
           </Button>
           <a href="/signup">New to OASIS? Sign up now</a>
             <div>
-                <a href="/forgotpassword">Forgot Password</a>
+                <a href={paths.forgotpassword}>Forgot Password</a>
             </div>
         </div>
 

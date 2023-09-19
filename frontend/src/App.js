@@ -13,7 +13,8 @@ import history from "./history";
 import Publish from "./routes/Publish";
 import About from "./routes/About";
 import Question from "./routes/Question";
-import ForgotPassword from "./routes/ForgotPassword"
+import ForgotPassword from "./routes/PasswordForgotten"
+import ChangePassword from "./routes/PasswordChange"
 
 
 import Test from "./routes/Test";
@@ -73,6 +74,7 @@ function App() {
                 <Route path={paths.question} component={Question} />
                 <Route path={paths.postreview} component={Question} />
                 <Route path={paths.forgotpassword} component={ForgotPassword} />
+                <Route path={paths.changepassword} component={ChangePassword} />
               </Switch>
             </CommentsProvider>
           </ReviewsProvider>
