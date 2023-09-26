@@ -1,3 +1,25 @@
 
 Lookup this concept: Nanopublication-based semantic publishing and reviewing: a field study with formalization papers
 https://peerj.com/articles/cs-1159/
+
+
+To Auth, you need a user.
+https://strapi.io/blog/strapi-authentication-with-react
+https://github.com/Sachin-chaurasiya/React_Strapi_Auth_FrontEnd/tree/main/src
+
+
+For local development.
+
+API_TOKEN_SALT: faa58097f1be8b6c24c7922a06ba2384
+
+default:
+REACT_APP_PUBLIC_STRAPI_API_URL: http://localhost:1337
+
+Testbed:
+REACT_APP_PUBLIC_STRAPI_API_URL: https://strapi-ynme.onrender.com/
+
+Starter Questions:
+* What is a micropub
+* what is resilience
+* covid: https://docs.google.com/document/d/1KnszsteV7qJ1GSNLWLB4TkKQI967ESAIkniTBD1deQs/edit#heading=h.v7g59rm0gs5f
+

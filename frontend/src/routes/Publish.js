@@ -104,6 +104,7 @@ export default function Publish(props) {
   } ;
   //const micropub = text.micropub;
   const [micropub, setMicropub] = useState();
+
   const [resources,SetResources] = useState([]);
   const [categories, setCategories ]= useState([]);
   const [keywords, setKeywords ]= useState([]);
@@ -161,7 +162,7 @@ export default function Publish(props) {
                // setAuthors(thisPub.attributes?.authors)
                setKeywords(thisPub.attributes?.keywords)
                 //setFilesValue(thisPub.attributes?.files)
-
+                 setEditingValue(true);
              }
          )
              // make sure to catch any error
@@ -617,11 +618,12 @@ export default function Publish(props) {
       <div style={{ flex: 1, background: "none" }}></div>
       <div className="controls">
         <Button className="btn--sm btn--blue" variant="primary" onClick={handleSave}>
-          Save
+            {editingValue ?  "Update" : "Save" }
         </Button>
-        <Button className="btn--sm btn--blue" variant="primary" onClick={handlePublish}>
+          {editingValue ? "" :
+              <Button className="btn--sm btn--blue" variant="primary" onClick={handlePublish}>
           Publish
-        </Button>
+        </Button> }
         <Button
           className="btn--sm btn--discard"
           variant="danger"
