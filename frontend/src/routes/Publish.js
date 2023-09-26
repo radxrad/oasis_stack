@@ -431,7 +431,7 @@ export default function Publish(props) {
         if (editingValue ){
           updateMp(mpObj, slug);
         } else  {
-        createMp(mpObj);
+            createMp(mpObj);
         }
       }
     }
@@ -618,12 +618,12 @@ export default function Publish(props) {
       <div style={{ flex: 1, background: "none" }}></div>
       <div className="controls">
         <Button className="btn--sm btn--blue" variant="primary" onClick={handleSave}>
-            {editingValue ?  "Update" : "Save" }
+             Save
         </Button>
-          {editingValue ? "" :
+
               <Button className="btn--sm btn--blue" variant="primary" onClick={handlePublish}>
-          Publish
-        </Button> }
+                  {editingValue ? "Save and Read" : "Publish" }
+        </Button>
         <Button
           className="btn--sm btn--discard"
           variant="danger"
