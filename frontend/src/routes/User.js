@@ -121,8 +121,8 @@ export default function User() {
         <div className="block">
           <div className="heading">
             My Question & Answers
-            <Button className="btn--blue btn--lg" onClick={handleShow}>
-              <MdQuestionAnswer close={handleClose} />
+            <Button className="btn--blue btn--lg" onClick={handleShow} >
+              <MdQuestionAnswer  />
               <span>Ask a Question</span>
             </Button>
           </div>

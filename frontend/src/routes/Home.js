@@ -162,7 +162,7 @@ export default function Home(apikey, apiusername) {
           <p className="preview__subtitle">Featured MICROPUBS</p>
           <div className="mp-list">
             {micropubs
-              ? micropubs.sort(() => Math.random() - 0.5).slice(0, 3).map((item, i) => {
+              ? micropubs.sort(() => Math.random() - 0.5).slice(0, 4).map((item, i) => {
                 let file = item.attributes?.files?.data?.length > 0 ? item.attributes?.files?.data[0].attributes.url:undefined;
                  file = file? getStrapiURL(file): file;
                return   <MicropubCard
@@ -199,7 +199,7 @@ export default function Home(apikey, apiusername) {
           <p className="preview__subtitle">Featured QUESTIONS</p>
           <div className="home-qs">
             {questions?
-                questions.sort(() => Math.random() - 0.5).slice(0, 3).map( q =>
+                questions.sort(() => Math.random() - 0.5).slice(0, 4).map( q =>
                 {
                   let answerCount = q.attributes.micropublications.data ? q.attributes.micropublications.data.length : 0
                   return  <QuestionFrontPage
