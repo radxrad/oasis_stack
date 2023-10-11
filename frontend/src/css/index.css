@@ -525,6 +525,7 @@ a:active {
   flex-direction: row;
   justify-content: space-between;
   padding: 0;
+  overflow-x: auto;
 }
 
 .userpage .welcome {
@@ -1801,7 +1802,9 @@ jsconfig.json
   }
 
   .home .preview .mp-list {
+    display: flex;
     flex-wrap: wrap;
+    overflow-x: auto;
   }
 
   .home .container {
@@ -1816,11 +1819,12 @@ jsconfig.json
   .preview .card {
     height: auto;
     padding: 2rem 1rem;
-    width: 100%;
+    width: 33%;
   }
 
   .preview .mp-list .card {
     margin-bottom: 1.5rem;
+    overflow-x: auto;
   }
 
   .micropub .card-img {

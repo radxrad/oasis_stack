@@ -16,6 +16,7 @@ export default function AddQuestion(props) {
   if (props.micropub) {
     setMicropubs([props.micropub]);
   }
+  const closeFn = props.close;
   const [visibility, setVisibility] = useState(null);
   const [description, setDescription] = useState(null);
   const [question, setQuestion] = useState(null);
@@ -54,6 +55,7 @@ export default function AddQuestion(props) {
       let redir = `/question/${slug}`;
       //Redirect(redir);
       history.push(redir);
+      closeFn();
     }).catch((err) => {
      console.error(err);
 
@@ -130,12 +132,12 @@ export default function AddQuestion(props) {
         </div>
       </Form.Group>
       <Form.Group className="controls">
-        <Button className="btn--lg btn--cancel" onClick={props.close}>
+        <Button className="btn--lg btn--cancel" onClick={closeFn}>
           Cancel
         </Button>
         <Button className="btn--lg" onClick={(e) => handleAddQuestion(e)}>
           <MdQuestionAnswer />
-          Ask a Question
+          Ask This Question
         </Button>
         <Button className="btn--lg" onClick={(e) => handleChatGPT(e)}>
           <MdQuestionAnswer />
