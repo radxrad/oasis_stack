@@ -285,7 +285,12 @@ export default function Read() {
                     </a>
                 </Button> ) : ""
             }
-
+            <Button className="btn--blue btn--md">
+                <a  href={`/publish/${micropub?.attributes?.slug}`}
+                classname="">
+                    Edit
+                </a>
+            </Button>
         </div>
         <div className="controls">
             <ReviewStats slug={slug}
