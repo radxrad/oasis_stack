@@ -24,7 +24,7 @@ import PubKeywordTypeahead from "../components/PubKeywordTypeAhead";
 import PubAuthorTypeahead from "../components/PubAuthorTypeAhead";
 export default function Publish(props) {
 
-  const {slug} = useParams();
+  let {slug} = useParams();
 
   const { user, isLoading, setUser } = useAuthContext();
   let endpoint = '/micropublications';
@@ -176,7 +176,7 @@ export default function Publish(props) {
 
     const question = props.history.location.state?.question;
     const questionid = props.history.location.state?.questionid;
-    if (question !=="" || question === undefined )(
+    if (question !=="" || question !== undefined )(
         setTitleValue(question)
     );
 
@@ -267,10 +267,12 @@ export default function Publish(props) {
 
       setAuthors([user]);
     }
+      if (user !== undefined){
+          fetchData()
+              // make sure to catch any error
+              .catch(console.error);
+      }
 
-    fetchData()
-        // make sure to catch any error
-        .catch(console.error);
   }, [user]);
 
   const fileRefs = (fileList) => {
@@ -320,9 +322,11 @@ export default function Publish(props) {
   };
   function buildMicropub(){
     let mp = micropub;
-    let slug = slugify(titleValue);
+
     if (mp.slug) {
       slug = mp.slug;
+    } else {
+        slug = slugify(titleValue);
     }
     let title =titleValue;
 
@@ -333,7 +337,7 @@ export default function Publish(props) {
     //let mpFiles = fileRefs(filesValue);
    // let mpFiles =fileUploadList();
     const mpObj = {
-      "title": titleValue,
+      "title": title,
       "abstract": abstractHtml,
       "body": bodyHtml,
      "keywords": kwIdList,

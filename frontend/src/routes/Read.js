@@ -62,6 +62,7 @@ export default function Read() {
   const [username,setUsername] = useState();
   const [password,setPassword] = useState();
   const [loggedIn, setLoggedIn] = useState(false);
+  const [canEdit, setCanEdit] = useState(false);
 
     const stopEventPropagationTry = (event) => {
         if (event.target === event.currentTarget) {
@@ -81,6 +82,10 @@ export default function Read() {
         }
 
         setUser(newUser);
+        if (micropub){
+            const mpuser = micropub.attributes.user
+            setCanEdit(user == mpuser )
+        }
     }, [user]);
 
     useEffect(() => {
@@ -122,13 +127,14 @@ export default function Read() {
         filters: {
           slug: slug,
         },
-        populate: ["files", "keyword", "writer.picture", "writer", "ratings", "refList"],
+        populate: ["files", "keyword", "writer.picture", "writer", "ratings", "refList", "user"],
       }),
 
       ]);
       const micros  = await micropubRes;
      // const reviews = await reviewsRes;
       setMicropub(micros.data[0]);
+
        // setReviews(reviews.data);
     };
     fetchData()

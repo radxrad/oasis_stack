@@ -48,7 +48,7 @@ export default function Home(apikey, apiusername) {
     const fetchData = async () => {
       const [ categoriesRes, micropubRes, keywordRes, questionRes] = await Promise.all([
         fetchAPI("/categories", { populate: "*" }),
-        fetchAPI("/micropublications", { populate: ["files", "keyword", "writer"] }),
+        fetchAPI("/micropublications", { populate: ["files", "keyword", "writer", "keywords.thumbnail"] }),
         fetchAPI("/keywords", { populate: "*" }),
         fetchAPI("/questions", {
           populate: {
@@ -162,9 +162,16 @@ export default function Home(apikey, apiusername) {
           <p className="preview__subtitle">Featured MICROPUBS</p>
           <div className="mp-list">
             {micropubs
-              ? micropubs.sort(() => Math.random() - 0.5).slice(0,3).map((item, i) => {
+              && micropubs.sort(() => Math.random() - 0.5).slice(0,3).map((item, i) => {
                 let file = item.attributes?.files?.data?.length > 0 ? item.attributes?.files?.data[0].attributes.url:undefined;
                  file = file? getStrapiURL(file): file;
+                 if (file === undefined){
+                   let kw = item.attributes?.keywords?.data[0]?.attributes
+                    let image =  kw?.thumbnail?.data.attributes?.formats.thumbnail.url
+                   if (kw !== undefined){
+                     file = getStrapiURL(image)
+                   }
+                 }
                return   <MicropubCard
                     figure={file}
                     authors={item.attributes.writer.data }
@@ -175,7 +182,7 @@ export default function Home(apikey, apiusername) {
 
                   ></MicropubCard>
             })
-              : ""}
+              }
             {/*  <MicropubCard*/}
             {/*    img={example.img}*/}
             {/*    authorIds={example.authorIds}*/}

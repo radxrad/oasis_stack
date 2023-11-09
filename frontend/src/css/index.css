@@ -159,7 +159,7 @@ a:active {
   height: 15px;
   margin-right: 5px;
 }
-.btn a:link{
+.btn a{
   color: white;
 }
 .btn--lg {
